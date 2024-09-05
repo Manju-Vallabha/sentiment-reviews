@@ -1,3 +1,4 @@
 contractions
 nltk
 streamlit_lottie
+scikit-learn
