@@ -17,18 +17,8 @@ from nltk.stem import SnowballStemmer
 import joblib
 import json
 
-
-
-from streamlit_lottie import st_lottie
 st.set_page_config(layout='wide')
-#Animation files load funcion
-def load_lottiefile(filepath: str):
-    with open(filepath, "r") as f:
-        return json.load(f)
 
-amazon = load_lottiefile('Animation - 1696469171082.json')
-positive = load_lottiefile('Animation - 1696469273776.json')
-negative = load_lottiefile('Animation - 1696469331232.json')
 # Load your trained model and vectorizer
 model = joblib.load('svm_model.pkl')  # Load the SVM model from the file
 
@@ -60,11 +50,9 @@ with col2:
 
         # Display the result
             if prediction == 0:
-                st.write('Sentiment: Negative')
-                st_lottie(negative, speed=1, reverse=False, quality="low",loop=True, height=250)
-
+                st.info('Sentiment: Negative')
+    
             else:
-                st.write('Sentiment: Positive')
-                st_lottie(positive, speed=1, reverse=False, quality="low",loop=True, height=250)
+                st.info('Sentiment: Positive')
         else:
             st.write('Please enter a review for analysis.')
