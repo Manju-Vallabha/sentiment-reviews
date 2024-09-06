@@ -27,7 +27,6 @@ vectorizer = joblib.load('tfidf_vectorizer.pkl')  # Load the TF-IDF vectorizer f
 
 # Streamlit app title
 st.title('Amazon Reviews Sentiment Analysis')
-st_lottie(amazon, speed=1, reverse=False, quality="low",loop=True, height=250)
 # Text input for user to enter a review
 # Add a centering column
 col1, col2, col3 = st.columns([1, 6, 1])
