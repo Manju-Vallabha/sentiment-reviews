@@ -28,7 +28,7 @@ model = joblib.load('svm_model.pkl')  # Load the SVM model from the file
 vectorizer = joblib.load('tfidf_vectorizer.pkl')  # Load the TF-IDF vectorizer from the file
 
 # Streamlit app title
-st.title('Amazon Reviews Sentiment Analysis')
+st.title('Reviews Sentiment Analysis')
 
 # Text input for user to enter a review
 # Add a centering column
